@@ -1,0 +1,5 @@
+/.venv
+/libz3.dll
+/test_z3.py
+/z3
+/z3_test.py
