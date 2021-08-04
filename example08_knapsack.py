@@ -18,6 +18,8 @@ X = [Int("X%s" % i) for i in range(5)]
 s = Solver()
 s.add([And(0 <= X[i], X[i] <= 1) for i in range(5)])
 s.add(Sum([price[i]*X[i] for i in range(5)]) <= 15)
-s.add(Sum([value[i]*X[i] for i in range(5)]) >= 19)
+s.add(Sum([value[i]*X[i] for i in range(5)]) >= 18)
 
 print(s.check())
+if s.check() == sat:
+    print(s.model())
